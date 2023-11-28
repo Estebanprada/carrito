@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuracion de la pagina -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link del Vinculo al archivo de estilos  -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Titulo de la pagina -->
+    <title>Carrito</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Encabezado principal -->
+        <h1>ALKOSTO</h1>
+        <h2>CARRITO DE COMPRA</h2>
+
+        <!-- Primer articulo en el carrito -->
+        <div class="libro">
+            <!-- Imagen del producto -->
+            <img src="IMG/m2.jpg" alt=""  style="width: 50px; height: 70px; margin-right: 10px;">
+            
+            <!-- Titulo del producto -->
+            <h3>Forro para samsung S20 FE</h3>
+            
+            <!-- Precio del producto -->
+            <p>Precio: $25000</p>
+            
+            <!-- Etiqueta y entrada para la cantidad de unidades -->
+            <label for="cantidad1">Unidades:</label>
+            <input type="number" id="cantidad1" min="0" value="0" onchange="actualizarTotal()">
+        </div>
+
+        <!-- Segundo articulo en el carrito -->
+        <div class="libro">
+            <img src="IMG/m1.jpg" alt=""  style="width: 50px; height: 70px; margin-right: 10px;">
+            <h3>Vidrio templado S20 FE</h3>
+            <p>Precio: $15000</p>
+            <label for="cantidad2">Unidades:</label>
+            <input type="number" id="cantidad2" min="0" value="0" onchange="actualizarTotal()">
+        </div>
+
+        <!-- Tercer articulo en el carrito -->
+        <div class="libro">
+            <img src="IMG/m3.jpg" alt=""  style="width: 50px; height: 70px; margin-right: 10px;">
+            <h3>Audifonos Samsung</h3>
+            <p>Precio: $55000</p>
+            <label for="cantidad3">Unidades:</label>
+            <input type="number" id="cantidad3" min="0" value="0" onchange="actualizarTotal()">
+        </div>
+
+        <!-- Seccion que muestra el total de la compra -->
+        <div class="total">
+            <h2>Total de la Compra</h2>
+            <p id="totalCompra">$0</p>
+        </div>
+
+        <!-- Boton para calcular el total -->
+        <button onclick="calcularTotal()">Calcular Total</button>
+    </div>
+
+    <!-- Vinculo al archivo de scripts (scripts.js) -->
+    <script src="scripts.js"></script>
+</body>
+</html>
